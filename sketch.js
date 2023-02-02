@@ -2,7 +2,7 @@ let img;
 let img_1;
 
 function preload() {
-  //img = loadImage('bison.png');
+  img_1 = loadImage('bison.png');
   img = loadImage('img_1.png');
 }
 
@@ -44,7 +44,7 @@ function draw() {
     
   image(img, random(windowWidth), random(windowHeight),200, 100);
     
-  //image(img_1,200,300,200,100);
+  image(img_1,200,300,mouseX,mouseY+random(+10,-10));
 
     
     
@@ -96,7 +96,7 @@ function Bubble() {
   this.display = function(){
   //stroke(2);
   //strokeWeight(2);
-  fill(255,255,255);
+  fill(255,255,0);
   ellipse(this.x, this.y, 50,50);
   }
   
