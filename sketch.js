@@ -42,7 +42,7 @@ function draw() {
     
   // I M A G E S. -- -- --  IMG AND IMG_1
     
-  image(img, random(width), random(height),200, 100);
+  image(img, random(windowWidth), random(windowHeight),200, 100);
     
   //image(img_1,200,300,200,100);
 
@@ -75,12 +75,12 @@ var grid = {
   
   display : function () {
     
-    for (var x = 0; x < width; x += width / this.v) {
-		for (var y = 0; y < height; y += height / this.f) {
+    for (var x = 0; x < windowWidth; x += windowWidth / this.v) {
+		for (var y = 0; y < windowHeight; y += windowHeight / this.f) {
 			stroke(0);
 			strokeWeight(1);
-			line(x, 0, x, height);
-			line(0, y, width, y);
+			line(x, 0, x, windowHeight);
+			line(0, y, windowWidth, y);
 }
   }
   }
@@ -90,8 +90,8 @@ var grid = {
 
 function Bubble() {
   
-  this.x = random(0, width);
-  this.y = random(0,height);
+  this.x = random(0, windowWidth);
+  this.y = random(0,windowHeight);
   
   this.display = function(){
   //stroke(2);
@@ -113,13 +113,13 @@ var sandstorm = {
   
   display : function() {
     
-  mySize = min(width, height);
+  mySize = min(windowWidth, windowHeight);
   noiseMax = random(2000);
    
   // dotted wave
     
   push();
-  translate(width / 2, height / 4);   // to shake the epicenter of sandstorm
+  translate(windowWidth / 2, windowHeight / 4);   // to shake the epicenter of sandstorm
   noFill();
   for (var i = 0; i < 100; i += 2) {
 
