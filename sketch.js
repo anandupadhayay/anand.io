@@ -19,7 +19,7 @@ let angle = 30;
     // S E T U P 
 
 function setup() {
-  createCanvas(800,500);
+  createCanvas(windowWidth,windowHeight);
   //background(0);
   for (var i = 0; i<20; i++) {
     bubble[i] = new Bubble();
